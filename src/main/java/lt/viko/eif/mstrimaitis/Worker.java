@@ -1,5 +1,6 @@
 package lt.viko.eif.mstrimaitis;
 
+//simple getter and setter class for Worker
 public class Worker {
     private int id;
     private String name;

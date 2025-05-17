@@ -2,6 +2,7 @@ package lt.viko.eif.mstrimaitis;
 
 import java.util.Objects;
 
+// simple getter and setter class for Farmer
 public class Farmer {
     private int id;
     private String name;

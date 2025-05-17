@@ -1,0 +1,95 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "RestKG API",
+    "version": "1.0.0",
+    "description": "API documentation for RestKG"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Local server"
+    }
+  ],
+  "paths": {
+    "/api/farmers": {
+      "get": {
+        "summary": "Get all farmers",
+        "description": "Retrieve a list of all farmers.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "integer", "example": 1 },
+                      "name": { "type": "string", "example": "Farmer 1" },
+                      "description": { "type": "string", "example": "Description for Farmer 1" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/worker": {
+      "get": {
+        "summary": "Get all workers",
+        "description": "Retrieve a list of all workers.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "integer", "example": 1 },
+                      "name": { "type": "string", "example": "Worker 1" },
+                      "description": { "type": "string", "example": "Description for Worker 1" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/farmerworker": {
+      "get": {
+        "summary": "Get all farmers and workers",
+        "description": "Retrieve a combined list of all farmers and workers.",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": { "type": "integer", "example": 1 },
+                      "type": { "type": "string", "example": "farmer" },
+                      "name": { "type": "string", "example": "Farmer 1" },
+                      "description": { "type": "string", "example": "Description for Farmer 1" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
