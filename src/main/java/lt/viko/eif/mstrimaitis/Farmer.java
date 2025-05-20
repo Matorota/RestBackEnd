@@ -1,18 +1,33 @@
 package lt.viko.eif.mstrimaitis;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
+import java.util.List;
 import java.util.Objects;
 
-// simple getter and setter class for Farmer
+@Entity
 public class Farmer {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private String address;
     private String phone;
     private String email;
 
+    @OneToMany(mappedBy = "farmer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Worker> workers;
+
     public Farmer() {
     }
 
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -51,6 +66,14 @@ public class Farmer {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public List<Worker> getWorkers() {
+        return workers;
+    }
+
+    public void setWorkers(List<Worker> workers) {
+        this.workers = workers;
     }
 
     @Override

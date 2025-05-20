@@ -18,6 +18,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 // LINKUS PADARYTI: HATEOS (padaryta)
 // OPENAPI Dokumentacija (padaryta reikia uzklausti ar gerai)
 
+// taip pat pasidaryti Json Ignore and OneToMany
 /**
  * REST Controller for managing Farmer entities.
  * Supports standard CRUD operations and includes HATEOAS links.
