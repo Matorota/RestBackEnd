@@ -19,7 +19,7 @@ public class RestApplication implements CommandLineRunner {
 
         System.out.println("Full Hostname: " + hostname);
 
-        String baseUrl = "http://" + hostname + ":8080";
+        String baseUrl = "http://" + "localhost" + ":8080";
         System.out.println("Available API Endpoints:");
         // T-34 PAKEISTI I NORMAL localhost
         System.out.println(baseUrl + "/api/farmers");

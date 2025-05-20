@@ -1,6 +1,7 @@
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json'); // OpenAPI spec file
 
+// Matumbos yra cia nieko kito
 // Serve OpenAPI documentation at /api-docs
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
