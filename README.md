@@ -4,7 +4,7 @@ RestBackEnd is a backend application developed using Java and JavaScript, design
 
 ---
 
-## 🚀 Features
+## Features
 
 - **RESTful API**  
   Implements a set of RESTful endpoints for client-server communication.
@@ -18,11 +18,9 @@ RestBackEnd is a backend application developed using Java and JavaScript, design
 ---
 
 
----
+## Getting Started
 
-## 🛠️ Getting Started
-
-### ✅ Prerequisites
+### Prerequisites
 
 - Java Development Kit (JDK)
 - Maven
